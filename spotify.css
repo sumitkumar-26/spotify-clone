@@ -1,103 +1,509 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Varela+Round&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-body{
-    background-color: antiquewhite;
-}
-*{
+
+/* GOOGLE FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=Varela+Round&display=swap');
+
+
+/* RESET */
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-nav{
-    font-family: 'Ubuntu',sans-serif;
+
+
+/*  BODY */
+
+body {
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    font-family: "Ubuntu", sans-serif;
 }
-nav ul{
+
+
+/* NAVBAR */
+
+.navbar {
+    width: 100%;
+    background-color: #000;
+}
+
+.navbar-container {
+    min-height: 65px;
     display: flex;
-    list-style-type: none;
     align-items: center;
-    height: 65px; 
-    background-color: black;
+    padding: 0 5%;
+}
+
+
+/* Brand */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
     color: white;
-}
-nav ul li{
-    padding: 0 12px ;
-}
-.brand img{
-    width: 55px;
-}
-.brand{
-    display: flex;
-    font-weight: bolder;
-    align-items: center;
+    text-decoration: none;
+
     font-size: 1.3rem;
+    font-weight: 700;
 }
-.container{
-    min-height: 72vh;
-    background-color: black;
-    color:white;
-    font-family: 'Varela Round',sans-serif;
-    display: flex;
-    margin: 25px auto;
-    width: 70%;
-    border-radius: 12px;
-    padding: 34px;
-    border-radius: 10px;
-    background-image:url(Spotify\ Clone/bg.jpg);
-    background-size: cover;
+
+
+/* Logo */
+
+.brand img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
 }
-.bottom{
-    position:sticky;
-    height:130px;
-    background-color:black;
-    bottom: 0;
+
+
+/* Navigation */
+
+.nav-links {
     display: flex;
-    justify-content: center;
     align-items: center;
-    color: white;
-    flex-direction: column;
+
+    list-style: none;
+
+    margin-left: 30px;
+    gap: 10px;
 }
-.icons{
+
+.nav-links a {
+    display: block;
+
+    padding: 10px 15px;
+
+    color: white;
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    transition: background-color 0.2s ease;
+}
+
+.nav-links a:hover {
+    background-color: #222;
+}
+
+
+/* MAIN CONTAINER */
+
+.main-container {
+    width: 90%;
+    max-width: 1200px;
+
+    min-height: 72vh;
+
+    margin: 25px auto;
+    padding: 40px;
+
+    display: flex;
+    gap: 30px;
+
+    color: white;
+
+    border-radius: 12px;
+
+    background-color: #121212;
+
+    background-image:
+        url("Spotify Clone/bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* SONG LIST */
+
+.song-list {
+    flex: 1;
+}
+
+.song-list h1 {
+    margin-bottom: 35px;
+
+    font-family: "Varela Round", sans-serif;
+
+    font-size: 1.7rem;
+}
+
+
+.song-item-container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* SONG ITEM */
+
+.song-item {
+    min-height: 55px;
+
+    display: flex;
+    align-items: center;
+
+    background-color: white;
+    color: #111;
+
+    border-radius: 30px;
+
+    padding: 6px 10px;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+/* Hover */
+
+.song-item:hover {
+    transform: translateX(5px);
+    background-color: #f0f0f0;
+}
+
+
+/* Song cover */
+
+.song-item img {
+    width: 45px;
+    height: 45px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    margin-right: 15px;
+}
+
+
+/* Song name */
+
+.song-name {
+    flex: 1;
+
+    font-size: 0.95rem;
+}
+
+
+/* TIMESTAMP */
+
+.timestamp {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-right: 10px;
+
+    font-size: 0.85rem;
+}
+
+
+/* SONG PLAY BUTTON */
+
+.song-item-play {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+    color: #111;
+
+    cursor: pointer;
+
+    font-size: 1.2rem;
+
+    border-radius: 50%;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.song-item-play:hover {
+    background-color: #ddd;
+
+    transform: scale(1.1);
+}
+
+
+/* SONG BANNER */
+
+.song-banner {
+    width: 30%;
+
+    background-image:
+        url("Spotify Clone/bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 10px;
+
+    opacity: 0.8;
+}
+
+
+/* MUSIC PLAYER */
+
+.music-player {
+    position: sticky;
+
+    bottom: 0;
+
+    width: 100%;
+
+    min-height: 120px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: #000;
+
+    color: white;
+
+    padding: 15px;
+}
+
+
+/* PROGRESS BAR */
+
+#progress-bar {
+    width: min(80%, 700px);
+
+    cursor: pointer;
+
+    accent-color: white;
+}
+
+
+/* PLAYER CONTROLS */
+
+.player-controls {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
     margin-top: 15px;
 }
 
-.icons{
-    cursor: pointer;
-}
 
-#myProgressBar{
-    width: 80vh;
-}
+/* Player buttons */
 
-.songItemContainer{
-    margin-top: 74px;
-}
+.player-controls button {
+    width: 45px;
+    height: 45px;
 
-.songItem{
-    height: 50px;
     display: flex;
-    background-color: white;
-    color:black;
-    margin: 12px 0px;
-    justify-content: space-between;
     align-items: center;
-    border-radius: 34px;
-}
+    justify-content: center;
 
-.songItem img{
-    width: 43px;
-    margin: 0 23px;
-    border-radius: 34px;
-}
+    border: none;
 
-.timestamp{
-    margin: 0 23px;
-    
-}
+    background: transparent;
 
-.timestamp i {
+    color: white;
+
     cursor: pointer;
+
+    font-size: 1.4rem;
+
+    border-radius: 50%;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
 }
 
-.songInfo{
+
+/* Hover */
+
+.player-controls button:hover {
+    background-color: #222;
+
+    transform: scale(1.1);
+}
+
+
+/* CURRENT SONG INFORMATION */
+
+.song-info {
     position: absolute;
-    left: 13vw;
+
+    left: 5%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-family: "Varela Round", sans-serif;
+
+    font-size: 0.9rem;
+}
+
+
+/* Playing GIF */
+
+.song-info img {
+    width: 42px;
+    height: 30px;
+
+    object-fit: contain;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    .navbar-container {
+        padding: 0 20px;
+    }
+
+
+    .main-container {
+        width: 95%;
+
+        padding: 25px 15px;
+
+        flex-direction: column;
+    }
+
+
+    .song-banner {
+        display: none;
+    }
+
+
+    .song-list h1 {
+        font-size: 1.3rem;
+    }
+
+
+    .song-item {
+        min-height: 50px;
+    }
+
+
+    .song-item img {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .song-name {
+        font-size: 0.85rem;
+    }
+
+
+    .timestamp {
+        font-size: 0.75rem;
+    }
+
+
+    .song-info {
+        position: static;
+
+        margin-top: 10px;
+    }
+
+
+    .music-player {
+        min-height: 145px;
+    }
+
+}
+
+
+/* SMALL MOBILE DEVICES */
+
+@media (max-width: 480px) {
+
+    .nav-links {
+        margin-left: 10px;
+        gap: 0;
+    }
+
+
+    .nav-links a {
+        padding: 8px;
+    }
+
+
+    .brand span {
+        display: none;
+    }
+
+
+    .main-container {
+        margin-top: 15px;
+        padding: 20px 10px;
+    }
+
+
+    .song-list h1 {
+        font-size: 1.1rem;
+
+        margin-bottom: 20px;
+    }
+
+
+    .song-item {
+        padding: 5px;
+    }
+
+
+    .song-item img {
+        width: 38px;
+        height: 38px;
+
+        margin-right: 10px;
+    }
+
+
+    .timestamp {
+        gap: 5px;
+
+        margin-right: 3px;
+    }
+
+
+    .timestamp {
+        font-size: 0;
+    }
+
+
+    .song-item-play {
+        font-size: 1rem;
+    }
+
+
+    .player-controls {
+        gap: 15px;
+    }
+
 }

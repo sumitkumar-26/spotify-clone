@@ -1,101 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset = "UTF-8">
-    <meta http-equiv="X-UA-compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>spotify - your favourite music is here</title>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="A Spotify-inspired music player built with HTML, CSS and JavaScript"
+    >
+
+    <title>Spotify Clone - Music Player</title>
+
     <link rel="stylesheet" href="spotify.css">
 </head>
+
 <body>
-    <nav>
-        <ul>
-            <li class="brand">
-                <img src="Spotify Clone/logo.jpg" alt="spotify">
-                spotify
-            </li>
-            <li>Home</li>
-            <li>About</li>
 
-        </ul>
-    </nav>
+    <!--  NAVBAR  -->
 
-    <div class="container">
-        <div class="songList">
-             <h1>Best of NCS - No Copy Right Sounds</h1>
-            <div class="songItemContainer">
-                <div class="songItem">
-                     <img src="Spotify Clone/covers/1.jpg" alt="1">
-                     <span>Let Me Love You</span>
-                     <span class="songlistplay"></span><span class="timestamp"> 05:34 <i class="fa-solid fa-play-circle"></i> </span>
-                </div>
-                 <div class="songItem">
-                     <img src="Spotify Clone/covers/1.jpg" alt="1">
-                     <span>Let Me Love You</span>
-                     <span class="songlistplay"></span><span class="timestamp"> 05:34 <i class="fa-solid fa-play-circle"></i> </span>
-                </div>
-                 <div class="songItem">
-                     <img src="Spotify Clone/covers/1.jpg" alt="1">
-                     <span>Let Me Love You</span>
-                     <span class="songlistplay"></span><span class="timestamp"> 05:34 <i class="fa-solid fa-play-circle"></i> </span>
-                </div>
-                 <div class="songItem">
-                     <img src="Spotify Clone/covers/1.jpg" alt="1">
-                     <span>Let Me Love You</span>
-                     <span class="songlistplay"></span><span class="timestamp"> 05:34 <i class="fa-solid fa-play-circle"></i> </span>
-                </div>
-                 <div class="songItem">
-                     <img src="Spotify Clone/covers/1.jpg" alt="1">
-                     <span>Let Me Love You</span>
-                     <span class="songlistplay"></span><span class="timestamp"> 05:34 <i class="fa-solid fa-play-circle"></i> </span>
-                </div>
-                 <div class="songItem">
-                     <img src="Spotify Clone/covers/1.jpg" alt="1">
-                     <span>Let Me Love You</span>
-                     <span class="songlistplay"></span><span class="timestamp"> 05:34 <i class="fa-solid fa-play-circle"></i> </span>
-                </div>
-                 <div class="songItem">
-                     <img src="Spotify Clone/covers/1.jpg" alt="1">
-                     <span>Let Me Love You</span>
-                     <span class="songlistplay"></span><span class="timestamp"> 05:34 <i class="fa-solid fa-play-circle"></i> </span>
-                </div>
-                 <div class="songItem">
-                     <img src="Spotify Clone/covers/1.jpg" alt="1">
-                     <span>Let Me Love You</span>
-                     <span class="songlistplay"></span><span class="timestamp"> 05:34 <i class="fa-solid fa-play-circle"></i> </span>
-                </div>
-                 <div class="songItem">
-                     <img src="Spotify Clone/covers/1.jpg" alt="1">
-                     <span>Let Me Love You</span>
-                     <span class="songlistplay"></span><span class="timestamp"> 05:34 <i class="fa-solid fa-play-circle"></i> </span>
-                </div>
-                 <div class="songItem">
-                     <img src="Spotify Clone/covers/1.jpg" alt="1">
-                     <span>Let Me Love You</span>
-                     <span class="songlistplay"></span><span class="timestamp"> 05:34 <i class="fa-solid fa-play-circle"></i> </span>
-                </div>
+    <header class="navbar">
+
+        <nav class="navbar-container">
+
+            <a href="/" class="brand">
+                <img
+                    src="Spotify Clone/logo.jpg"
+                    alt="Spotify Clone Logo"
+                >
+
+                <span>Spotify</span>
+            </a>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+
+                <li>
+                    <a href="#">About</a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!--  MAIN CONTENT  -->
+
+    <main class="main-container">
+
+        <!-- Song List -->
+
+        <section class="song-list">
+
+            <h1>Best of NCS - No Copyright Sounds</h1>
+
+            <div class="song-item-container">
+
+                <!-- JavaScript will generate songs here -->
 
             </div>
-        </div>
-        <div class="songBanner"></div>
-    </div>
 
-    <div class="bottom">
-            <input type="range" name="range" id="myProgressBar" min="0" max="100">
-    <div  class="icons">
-        <!-- fontawesome icons -->
-         <i class="fa-2x fa-solid fa-fast-backward"></i>
-         <i class="fa-2x fa-solid fa-backward-step"></i>
-         <i class="fa-2x fa-solid fa-play-circle"></i>
-         <i class="fa-2x fa-solid fa-forward-step"></i>
-         <i class="fa-2x fa-solid fa-fast-forward"></i>
-    </div>
-     <div class="songInfo">
-        <img src="Spotify Clone/playing.gif" width="42px" alt="">Let me love you - Justing Beiber
-    </div>
-    </div>
-   
-    <script src="https://kit.fontawesome.com/5a7bd537be.js" crossorigin="anonymous"></script>
+        </section>
+
+
+        <!-- Right Side Banner -->
+
+        <aside class="song-banner">
+        </aside>
+
+    </main>
+
+
+    <!--  MUSIC PLAYER  -->
+
+    <footer class="music-player">
+
+        <!-- Progress Bar -->
+
+        <input
+            type="range"
+            id="progress-bar"
+            min="0"
+            max="100"
+            value="0"
+            aria-label="Song progress"
+        >
+
+
+        <!-- Player Controls -->
+
+        <div class="player-controls">
+
+            <button
+                type="button"
+                id="previous"
+                aria-label="Previous song"
+            >
+                <i class="fa-solid fa-backward-step"></i>
+            </button>
+
+
+            <button
+                type="button"
+                id="master-play"
+                aria-label="Play or pause"
+            >
+                <i class="fa-solid fa-play"></i>
+            </button>
+
+
+            <button
+                type="button"
+                id="next"
+                aria-label="Next song"
+            >
+                <i class="fa-solid fa-forward-step"></i>
+            </button>
+
+        </div>
+
+
+        <!-- Current Song -->
+
+        <div class="song-info">
+
+            <img
+                src="Spotify Clone/playing.gif"
+                alt=""
+                id="playing-gif"
+            >
+
+            <span id="master-song-name">
+                Select a song
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Font Awesome -->
+
+    <script
+        src="https://kit.fontawesome.com/5a7bd537be.js"
+        crossorigin="anonymous"
+    ></script>
+
+    <!-- JavaScript -->
+
     <script src="spotify.js"></script>
+
 </body>
-</html>    
+
+</html>
